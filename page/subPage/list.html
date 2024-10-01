@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style/subPage/registration.css" />
+
+    <script
+      src="https://kit.fontawesome.com/b64b541721.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>점검 리스트</title>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="innerWrap">
+        <h2>입주 사전점검</h2>
+        <p>점검 리스트</p>
+        <div class="searchBar">
+          <input
+            type="text"
+            id="searchInput"
+            class="searchInput"
+            placeholder="검색어를 입력하세요"
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div>
+          <div class="classification">
+            <label for="large">점검 실</label>
+            <select class="large" name="large" required>
+              <option value="">점검 실을 선택하세요</option>
+              <option value="large1">대1</option>
+              <option value="large2">대2</option>
+              <option value="large3">대3</option>
+            </select>
+          </div>
+          <div class="classification">
+            <label for="middle">점검부위</label>
+            <select class="middle" name="middle" required>
+              <option value="">점검부위를 선택하세요</option>
+              <option value="middle1">대1</option>
+              <option value="middle2">대2</option>
+              <option value="middle3">대3</option>
+            </select>
+          </div>
+          <div class="classification">
+            <label for="small">세부공종</label>
+            <select class="small" name="small" required>
+              <option value="">세부공종을 선택하세요</option>
+              <option value="small1">대1</option>
+              <option value="small2">대2</option>
+              <option value="small3">대3</option>
+            </select>
+          </div>
+          <button class="listSearchBtn">조회</button>
+        </div>
+        <table class="tg" style="table-layout: fixed; width: 280px">
+          <colgroup>
+            <col style="width: 33.33%" />
+            <col style="width: 33.33%" />
+            <col style="width: 33.33%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="tg-9act">점검 실</th>
+              <th class="tg-9act">점검부위</th>
+              <th class="tg-9act">세부공종</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-yf1d">거실</td>
+              <td class="tg-yf1d">벽지</td>
+              <td class="tg-yf1d">오염</td>
+            </tr>
+            <tr>
+              <td class="tg-yf1d">안방</td>
+              <td class="tg-yf1d">장판</td>
+              <td class="tg-yf1d">찢어짐</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="downloadBtn">
+          <button>이미지 다운로드</button>
+          <button>PDF 다운로드</button>
+        </div>
+        <div class="downloadtext">
+          <p>* 이미지 다운로드 시 동-호-하자번호-사진연번.jpg로 저장됩니다.</p>
+          <p>* PDF 다운로드 시 보고서 형태의 A4사이즈 파일이 저장 됩니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var trElements = document.querySelectorAll("tr");
+        trElements.forEach(function (trElement) {
+          trElement.addEventListener("click", function () {
+            window.location.href = "listView.html";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

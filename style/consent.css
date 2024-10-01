@@ -1,0 +1,79 @@
+.inner {
+  text-align: center;
+}
+
+.innerWrap {
+  margin: 0 auto;
+}
+
+.innerWrap h2 {
+  font-size: 17px;
+  padding: 18px 0;
+  border-bottom: 2px solid #3030ba;
+  margin-bottom: 10px;
+}
+
+#joinForm {
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.join_box .check01 {
+  border-bottom: 1px solid #d7d7d7;
+  padding: 10px 0;
+}
+
+.join_box .checkBox {
+  margin-bottom: 20px;
+}
+
+.clearfix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clearfix li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.clearfix li span {
+  color: red;
+}
+
+textarea {
+  width: 266px;
+  height: 150px;
+  resize: none;
+  padding: 5px;
+  color: #959595;
+  font-size: 11px;
+}
+
+.footBtwrap {
+  margin-top: 15px;
+}
+.footBtwrap > li {
+  width: 48%;
+}
+.footBtwrap > li > button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 20px;
+}
+.fpmgBt1 {
+  background-color: #fff;
+  color: #888;
+  border: 1px solid rgb(185, 185, 185);
+}
+.fpmgBt2 {
+  background-color: #3030ba;
+  border: 1px solid #3030ba;
+  color: #fff;
+}

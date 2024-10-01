@@ -1,0 +1,273 @@
+.inner {
+  text-align: center;
+}
+
+.innerWrap {
+  margin: 0 auto;
+}
+
+.innerWrap h2 {
+  font-size: 17px;
+  padding: 18px 0;
+  border-bottom: 2px solid #3030ba;
+}
+
+.innerWrap > p {
+  background-color: #3030ba;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.checkPoint {
+  display: flex;
+  justify-content: center;
+}
+
+.checkPoint > div {
+  margin: 16px 14px;
+  font-size: 14px;
+}
+
+.checkPoint > div:nth-of-type(1) i {
+  color: #0bec7f;
+}
+.checkPoint > div:nth-of-type(2) i {
+  color: #ff0000;
+}
+.checkPoint > div:nth-of-type(3) i {
+  color: #b8b8b8;
+}
+
+.classification {
+  display: flex;
+  width: 280px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.firstclassification {
+  margin-top: 15px;
+}
+
+.classification label {
+  width: 80px;
+  text-align: left;
+}
+
+.classification > p {
+  width: 80px;
+  text-align: left;
+  margin-top: 12px;
+}
+
+input {
+  border: none;
+  font-size: 14px;
+  border-bottom: 1px solid #d7d7d7;
+  width: 200px;
+  margin: 15px 0;
+}
+
+input::placeholder {
+  font-size: 13px;
+  font-family: "NanumSquareNeo";
+  color: #c6c6c6;
+}
+
+input:focus {
+  border-bottom: 1px solid #d7d7d7;
+  outline: none;
+}
+
+#large,
+#middle,
+#small,
+#damaged {
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+  width: 200px;
+  font-size: 14px;
+  color: #c6c6c6;
+  margin: 15px 0;
+  background-color: #fff;
+  height: 20px;
+}
+
+.large,
+.middle,
+.small {
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+  width: 200px;
+  font-size: 14px;
+  color: #c6c6c6;
+  margin: 15px 0;
+  background-color: #fff;
+  height: 20px;
+}
+
+.classificationBlock {
+  display: block;
+}
+
+.classificationBlock textarea {
+  width: 280px;
+  margin: 5px 0 15px 0;
+  height: 80px;
+  border: 1px solid #d7d7d7;
+  resize: none;
+  border-radius: 5px;
+}
+
+.classificationBlock > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.classificationBlock > div > div {
+  width: 135px;
+  border: 1px solid #d7d7d7;
+  height: 135px;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #b8b8b8;
+  font-size: 12px;
+}
+
+.classificationBlock > div > div i {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.checkBoxNone {
+  width: 24px;
+}
+
+.checkBox {
+  margin: 15px auto 5px;
+}
+
+.listSave {
+  width: 150px;
+  border: 1px solid #3030ba;
+  background-color: #3030ba;
+  border-radius: 30px;
+  padding: 12px 0;
+  color: #fff;
+  margin: 10px 0 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.searchInput {
+  font-size: 14px;
+  border: 1px solid #d7d7d7;
+  width: 280px;
+  height: 30px;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+.searchInput:focus {
+  border: 1px solid #d7d7d7;
+  outline: none;
+}
+
+.searchBar {
+  position: relative;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  margin: 25px 0 0 -28px;
+  color: #b8b8b8;
+  font-size: 14px;
+}
+
+.listSearchBtn {
+  padding: 6px 24px;
+  border: none;
+  background-color: #777777;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.tg {
+  margin: 30px auto 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: 2px solid #959595;
+}
+.tg td {
+  border-top: 1px solid #959595;
+  border-bottom: 1px solid #959595;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg th {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg .tg-9act {
+  background-color: #ffffff;
+  border-color: #efefef;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.tg .tg-yf1d {
+  background-color: #ffffff;
+  border-color: #efefef;
+  color: #555;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.downloadBtn {
+  display: flex;
+  width: 280px;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.downloadBtn button {
+  width: 120px;
+  border: 1px solid #3030ba;
+  background-color: #3030ba;
+  border-radius: 30px;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 13px;
+}
+
+.downloadtext {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.downloadtext p {
+  font-size: 10px;
+  text-align: left;
+  margin: 2px 0;
+  color: #ff0000;
+}
+
+.detailsPage {
+  margin-top: 20px;
+}

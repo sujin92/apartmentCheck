@@ -1,0 +1,351 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+  background-color: #fff;
+  box-shadow: 0 3px 15px rgba(123, 123, 123, 0.16);
+}
+
+header .logo {
+  width: 10%;
+  height: 110px;
+  background-color: #3030ba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .userInfo {
+  display: flex;
+  align-items: center;
+  width: 8%;
+}
+
+header .userInfo img {
+  margin-right: 50px;
+}
+
+header .userInfo i {
+  margin-right: 5px;
+  background-color: #3030ba;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+
+.species {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  right: 6.6%;
+  top: 3%;
+}
+
+.tabWrap {
+  display: flex;
+}
+
+button {
+  display: flex;
+  margin: 30px auto;
+  font-size: 20px;
+  border: none;
+  background-color: #fff;
+  text-align: center;
+  width: 80%;
+  height: 42px;
+  line-height: 42px;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.tabs button.active {
+  background-color: #3030ba;
+  color: #fff;
+}
+
+.tabWrap .tabs {
+  width: 10%;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 3px 15px rgba(123, 123, 123, 0.16);
+  position: absolute;
+  top: 0;
+  z-index: -99;
+}
+
+.tabWrap .tabs button:nth-of-type(1) {
+  margin-top: 180px;
+}
+
+.tabInner {
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 90%;
+  right: 0;
+  height: 100vh;
+  top: 0;
+  z-index: -999;
+}
+
+.tabInner .tabContent {
+  margin: 160px 50px 0;
+}
+
+.tabInner .tabContent h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.tabInner .tabContent > div {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 30px 0 50px;
+}
+
+.tabInner .tabContent div h3 {
+  font-size: 20px;
+  padding: 30px 20px 0;
+}
+
+.joinApproval {
+  padding: 20px;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tg td {
+  border-bottom: 1px solid #333333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg th {
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+.tg .tg-9act {
+  background-color: #ffffff;
+  border-color: #efefef;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.tg .tg-y1p3 {
+  background-color: #ffffff;
+  border-color: #efefef;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+}
+.tg .tg-yf1d {
+  background-color: #ffffff;
+  border-color: #efefef;
+  color: #555;
+  text-align: center;
+  vertical-align: middle;
+}
+.tg .tg-uj0o {
+  background-color: #ffffff;
+  border-color: #efefef;
+  text-align: center;
+  vertical-align: top;
+}
+
+.membersOk,
+.withdrawal {
+  width: 150px;
+  border: 1px solid #3030ba;
+  background-color: #3030ba;
+  border-radius: 30px;
+  color: #fff;
+  margin: 30px auto 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#members02 .joinApproval > div:nth-of-type(1) {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+#userList,
+.searchInputManager,
+.apartmentAddBox {
+  width: 250px;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  color: #555;
+}
+
+.searchBarManager {
+  position: relative;
+}
+
+.apartmentAdd,
+.generationInquiry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.apartmentAdd button,
+.generationBtn {
+  font-size: 13px;
+  margin: 0;
+  width: 100px;
+  line-height: 27px;
+  height: 27px;
+  background-color: #959595;
+  border-radius: 3px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.searchBarManager i {
+  position: absolute;
+  color: #959595;
+  right: 5%;
+  top: 20%;
+}
+
+.treeInner {
+  display: flex;
+  border: 1px solid #cfcfcf;
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+.treeInner > div {
+  width: 33.33%;
+  border-right: 1px solid #cfcfcf;
+  text-align: center;
+  padding: 10px 70px;
+}
+
+.treeInner > div:last-child {
+  border-right: none;
+}
+
+.treeInner > div h4 {
+  font-size: 17px;
+  background-color: #6e6e6e;
+  color: #fff;
+  width: 100px;
+  margin: 0 auto 20px;
+  padding: 7px 0;
+  border-radius: 30px;
+}
+
+.treeInner > div ul li {
+  text-align: left;
+  display: flex;
+  margin: 5px 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #dadada;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.treeInner > div ul li:nth-last-of-type(1) {
+  border: none;
+}
+
+.treeInner > div ul li span {
+  width: 280px;
+  margin-left: 20px;
+}
+
+.treeInner > div ul li > .inputCompartment {
+  width: 280px;
+  margin-left: 20px;
+  height: 23px;
+  margin-right: 30px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 380px;
+  margin: 0 auto;
+}
+
+.deleteBtn,
+.saveBtn,
+.newSaveBtn,
+.deleteBtn02,
+.saveBtn02,
+.imgDownload,
+.pdfDownload,
+.imgDownload02,
+.pdfDownload02 {
+  width: 150px;
+  border: 1px solid #3030ba;
+  background-color: #3030ba;
+  border-radius: 30px;
+  color: #fff;
+  margin: 30px auto 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.deleteBtn,
+.deleteBtn02 {
+  border: 1px solid #a1a1a1;
+  background-color: #a1a1a1;
+}
+
+.addBtn {
+  text-align: right;
+  font-size: 25px;
+  color: #333333;
+  margin: 20px 10px;
+}
+
+.addBtn span {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.fa-circle {
+  font-size: 8px;
+  color: #bebebe;
+}
+
+.categoryInquiry,
+.generationInquiry {
+  display: flex;
+}
+
+.categoryInquiry > div > select,
+.generationInquiry > div > select {
+  width: 230px;
+  margin: 20px 10px 20px 0;
+  height: 30px;
+  border: 1px solid #a1a1a1;
+}

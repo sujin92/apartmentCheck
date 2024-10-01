@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style/subPage/registration.css" />
+
+    <script
+      src="https://kit.fontawesome.com/b64b541721.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>사진 등록</title>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="innerWrap">
+        <h2>입주 사전점검</h2>
+        <p>사진 등록</p>
+        <!-- <div class="checkPoint">
+          <div><i class="fa-solid fa-circle"></i><span> 하자 없음</span></div>
+          <div><i class="fa-solid fa-circle"></i><span> 점검 완료</span></div>
+          <div><i class="fa-solid fa-circle"></i><span> 미점검</span></div>
+        </div> -->
+        <div>
+          <div class="classification firstclassification">
+            <label for="large">점검 실</label>
+            <select id="large" name="large" required>
+              <option value="">점검 실을 선택하세요</option>
+              <option value="large1">대1</option>
+              <option value="large2">대2</option>
+              <option value="large3">대3</option>
+            </select>
+          </div>
+          <div class="classification">
+            <label for="middle">점검부위</label>
+            <select id="middle" name="middle" required>
+              <option value="">점검부위를 선택하세요</option>
+              <option value="middle1">대1</option>
+              <option value="middle2">대2</option>
+              <option value="middle3">대3</option>
+            </select>
+          </div>
+          <div class="classification">
+            <label for="small">세부공종</label>
+            <select id="small" name="small" required>
+              <option value="">세부공종을 선택하세요</option>
+              <option value="small1">대1</option>
+              <option value="small2">대2</option>
+              <option value="small3">대3</option>
+            </select>
+          </div>
+          <div class="classification">
+            <label for="damaged">점검유형</label>
+            <select id="damaged" name="damaged" required>
+              <option value="">점검유형을 선택하세요</option>
+              <option value="damaged1">파손</option>
+              <option value="damaged2">불량</option>
+              <option value="damaged3">오염</option>
+              <option value="damaged4">마감</option>
+            </select>
+          </div>
+          <div class="classification">
+            <label for="additional">공종</label>
+            <input
+              type="text"
+              id="additional"
+              name="additional"
+              required
+              placeholder="공종을 입력하세요"
+            />
+          </div>
+          <div class="classification">
+            <label for="breakdownNum">하자번호</label>
+            <input
+              type="text"
+              id="breakdownNum"
+              name="breakdownNum"
+              required
+              placeholder="하자번호를 입력하세요"
+            />
+          </div>
+          <div class="classification classificationBlock">
+            <p>점검내용</p>
+            <textarea name="breakdownContent" id="breakdownContent"></textarea>
+          </div>
+          <div class="classification classificationBlock">
+            <p>사진등록</p>
+            <div>
+              <div>
+                <i class="fa-solid fa-camera"></i>
+                <p>원경사진 <span>(필수)</span></p>
+              </div>
+              <div>
+                <i class="fa-solid fa-camera"></i>
+                <p>근경사진 <span>(필수)</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="classification checkBox">
+            <input type="checkbox" class="checkBoxNone" />
+            <em>하자 없음</em>
+          </div>
+
+          <button class="listSave">저장</button>
+          <a href="/page/main.html"></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .querySelector(".listSave")
+        .addEventListener("click", function () {
+          window.location.href = "/page/main.html";
+        });
+    </script>
+  </body>
+</html>

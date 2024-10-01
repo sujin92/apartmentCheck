@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style/subPage/registration.css" />
+
+    <script
+      src="https://kit.fontawesome.com/b64b541721.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>사진 등록</title>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="innerWrap">
+        <h2>입주 사전점검</h2>
+        <p>점검 리스트 상세</p>
+        <div class="detailsPage">
+          <div class="classification">
+            <label for="listLarge">점검 실</label>
+            <input type="text" id="listLarge" name="listLarge" required />
+          </div>
+          <div class="classification">
+            <label for="listMiddle">점검부위</label>
+            <input type="text" id="listMiddle" name="listMiddle" required />
+          </div>
+          <div class="classification">
+            <label for="listSmall">세부공종</label>
+            <input type="text" id="listSmall" name="listSmall" required />
+          </div>
+          <div class="classification">
+            <label for="listDamaged">점검유형</label>
+            <input type="text" id="listDamaged" name="listDamaged" required />
+          </div>
+          <div class="classification">
+            <label for="ListAdditional">공종</label>
+            <input
+              type="text"
+              id="ListAdditional"
+              name="ListAdditional"
+              required
+            />
+          </div>
+          <div class="classification">
+            <label for="listBreakdownNum">하자번호</label>
+            <input
+              type="text"
+              id="listBreakdownNum"
+              name="listBreakdownNum"
+              required
+            />
+          </div>
+          <div class="classification classificationBlock">
+            <p>점검내용</p>
+            <textarea
+              name="breakdownContent"
+              id="listBreakdownContent"
+            ></textarea>
+          </div>
+          <div class="classification classificationBlock">
+            <p>사진등록</p>
+            <div>
+              <div>
+                <i class="fa-solid fa-camera"></i>
+                <p>원경사진 <span>(필수)</span></p>
+              </div>
+              <div>
+                <i class="fa-solid fa-camera"></i>
+                <p>근경사진 <span>(필수)</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="classification checkBox">
+            <input type="checkbox" class="checkBoxNone" />
+            <em>하자 없음</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

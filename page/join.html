@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style/join.css" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="innerWrap">
+        <h2>회원가입</h2>
+        <div class="joinForm">
+          <form id="registrationForm">
+            <label for="username">아이디</label><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              minlength="8"
+              pattern="[A-Za-z0-9]+"
+              title="영문 8자리 이상"
+              placeholder="영문 8자리 이상"
+              autocomplete="new-password"
+            />
+            <span class="overlapBtn" onclick="checkUsernameAvailability()"
+              >중복확인</span
+            >
+            <br />
+
+            <label for="password">비밀번호</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+              pattern="[A-Za-z0-9]+"
+              title="영문 8자리 이상"
+              placeholder="영문 8자리 이상"
+              autocomplete="new-password"
+            /><br />
+
+            <label for="confirm_password">비밀번호 확인</label><br />
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              required
+              minlength="8"
+              pattern="[A-Za-z0-9]+"
+              title="비밀번호 확인"
+              placeholder="비밀번호 확인"
+              autocomplete="new-password"
+            /><br />
+
+            <label for="fullname">이름</label><br />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              required
+              placeholder="세대주 이름을 입력하세요"
+            /><br />
+
+            <label for="phone">연락처</label><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="연락처를 입력하세요"
+            /><br />
+
+            <label for="dob">생년월일</label><br />
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              required
+              placeholder="생년월일을 입력하세요"
+            /><br />
+
+            <label for="apartment">아파트 선택</label><br />
+            <select id="apartment" name="apartment" required>
+              <option value="">아파트를 선택하세요</option>
+              <option value="apartment1">에일린의뜰</option></select
+            ><br />
+
+            <label for="dong">동 수</label><br />
+            <input
+              type="text"
+              id="dong"
+              name="dong"
+              required
+              placeholder="동 수를 입력하세요"
+            /><br />
+
+            <label for="hosu">호 수</label><br />
+            <input
+              type="text"
+              id="hosu"
+              name="hosu"
+              required
+              placeholder="호 수를 입력하세요"
+            /><br />
+
+            <button
+              type="button"
+              onclick="submitRegistrationForm()"
+              class="consent"
+            >
+              약관동의
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/userApp/userInfo.js"></script>
+  </body>
+</html>

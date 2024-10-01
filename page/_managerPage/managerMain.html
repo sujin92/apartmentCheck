@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/style/managerPage/managerMain.css" />
+
+    <script
+      src="https://kit.fontawesome.com/b64b541721.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/js/manager.js"></script>
+    <script src="/js/tab.js"></script>
+    <script src="/js/userList.js"></script>
+    <script src="/js/categoryadd.js"></script>
+
+    <title>관리자 페이지</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <div class="logo">
+          <img src="/public/img/logo_white.png" alt="logo" width="150" />
+        </div>
+        <div class="userInfo">
+          <img src="/public/icon/species.png" alt="종" width="20" />
+          <span class="species">0</span>
+          <i class="fa-regular fa-user"></i>
+          <p>리컴퍼니</p>
+        </div>
+      </header>
+      <div class="tabWrap">
+        <div class="tabs">
+          <button id="membersTab" onclick="openTab('members')">
+            회원 관리
+          </button>
+          <button
+            id="categoriesTab"
+            class="active"
+            onclick="openTab('categories')"
+          >
+            카테고리 관리
+          </button>
+          <!-- <button id="apartmentTab" onclick="openTab('apartment')">
+            아파트 관리
+          </button> -->
+          <button id="dataTab" onclick="openTab('data')">데이터 관리</button>
+        </div>
+
+        <div class="tabInner">
+          <div id="members" class="tabContent" style="display: block">
+            <h2>회원 관리</h2>
+            <div id="members01">
+              <h3>가입 승인</h3>
+              <div class="joinApproval">
+                <table class="tg" style="table-layout: fixed; width: 100%">
+                  <colgroup>
+                    <col style="width: 86px" />
+                    <col style="width: 101px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 133px" />
+                    <col style="width: 164px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th class="tg-9act">
+                        <input type="checkbox" id="mainCheck" />
+                      </th>
+                      <th class="tg-9act">이름</th>
+                      <th class="tg-9act">생년월일</th>
+                      <th class="tg-y1p3">연락처</th>
+                      <th class="tg-y1p3">아파트</th>
+                      <th class="tg-y1p3">동</th>
+                      <th class="tg-y1p3">호수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">홍길동</td>
+                      <td class="tg-yf1d">19920505</td>
+                      <td class="tg-uj0o">01012345678</td>
+                      <td class="tg-uj0o">롯데캐슬</td>
+                      <td class="tg-uj0o">101동</td>
+                      <td class="tg-uj0o">1011호</td>
+                    </tr>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">임수진</td>
+                      <td class="tg-yf1d">19680101</td>
+                      <td class="tg-uj0o">01011111111</td>
+                      <td class="tg-uj0o">아이파크</td>
+                      <td class="tg-uj0o">102동</td>
+                      <td class="tg-uj0o">2048호</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="membersOk">가입 승인</button>
+              </div>
+            </div>
+            <div id="members02">
+              <h3>회원 목록</h3>
+              <div class="joinApproval">
+                <div>
+                  <div class="selectBar">
+                    <select id="userList" name="userList" required>
+                      <option value="">아파트 명을 선택하세요</option>
+                      <option value="userList1">아파트1</option>
+                      <option value="userList2">아파트2</option>
+                      <option value="userList3">아파트3</option>
+                    </select>
+                  </div>
+                  <div class="searchBarManager">
+                    <input
+                      type="text"
+                      id="searchInputManager"
+                      class="searchInputManager"
+                      placeholder="검색어를 입력하세요"
+                    />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                </div>
+                <table
+                  id="memberTable"
+                  class="tg"
+                  style="table-layout: fixed; width: 100%"
+                >
+                  <colgroup>
+                    <col style="width: 86px" />
+                    <col style="width: 86px" />
+                    <col style="width: 101px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 133px" />
+                    <col style="width: 164px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th class="tg-9act">
+                        <input type="checkbox" id="mainCheck02" />
+                      </th>
+                      <th class="tg-9act">번호</th>
+                      <th class="tg-9act">이름</th>
+                      <th class="tg-9act">생년월일</th>
+                      <th class="tg-y1p3">연락처</th>
+                      <th class="tg-y1p3">아파트</th>
+                      <th class="tg-y1p3">동</th>
+                      <th class="tg-y1p3">호수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr></tr>
+                  </tbody>
+                </table>
+                <button class="withdrawal">탈퇴</button>
+              </div>
+            </div>
+          </div>
+          <div id="categories" class="tabContent">
+            <h2>카테고리 관리</h2>
+            <div id="categories01">
+              <h3>카테고리 관리</h3>
+              <div class="joinApproval">
+                <div class="treeInner">
+                  <div class="large01">
+                    <h4>점검 실</h4>
+                    <ul>
+                      <li>
+                        <span class="large001"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="middle01">
+                    <h4>점검부위</h4>
+                    <ul>
+                      <li>
+                        <span class="middle001"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="small01">
+                    <h4>세부공종</h4>
+                    <ul>
+                      <li>
+                        <span class="small001"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn">
+                  <button class="deleteBtn">선택 삭제</button>
+                  <button class="saveBtn">저장</button>
+                </div>
+              </div>
+            </div>
+            <div id="categories02">
+              <h3>카테고리 추가</h3>
+              <div class="joinApproval">
+                <div class="treeInner">
+                  <div class="test">
+                    <h4>점검 실</h4>
+                    <ul class="categoryAddInner">
+                      <li class="categoryAddList">
+                        <input type="text" class="inputCompartment" /><i
+                          class="fa-solid fa-caret-right"
+                        ></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="test">
+                    <h4>점검부위</h4>
+                    <ul class="categoryAddInner">
+                      <li class="categoryAddList">
+                        <input type="text" class="inputCompartment" /><i
+                          class="fa-solid fa-caret-right"
+                        ></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="test">
+                    <h4>세부공종</h4>
+                    <ul class="categoryAddInner">
+                      <li class="categoryAddList">
+                        <input type="text" class="inputCompartment" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="btn">
+                  <button class="newSaveBtn">추가 저장</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div id="apartment" class="tabContent">
+            <h2>아파트 관리</h2>
+            <div id="apartment01">
+              <h3>아파트 추가</h3>
+              <div class="joinApproval">
+                <div class="apartmentAdd">
+                  <input
+                    type="text"
+                    id="apartmentAddBox"
+                    class="apartmentAddBox"
+                    placeholder="아파트 명을 입력하세요"
+                  />
+                  <button class="apartmentAddBtn">추가</button>
+                </div>
+                <table class="tg" style="table-layout: fixed; width: 100%">
+                  <colgroup>
+                    <col style="width: 86px" />
+                    <col style="width: 101px" />
+                    <col style="width: 167px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th class="tg-9act">
+                        <input type="checkbox" id="mainCheck" />
+                      </th>
+                      <th class="tg-9act">이름</th>
+                      <th class="tg-y1p3">아파트</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">홍길동</td>
+                      <td class="tg-uj0o">롯데캐슬</td>
+                    </tr>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">임수진</td>
+                      <td class="tg-uj0o">아이파크</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn">
+                  <button class="deleteBtn02">선택 삭제</button>
+                  <button class="saveBtn02">저장</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div id="data" class="tabContent">
+            <h2>데이터 관리</h2>
+            <div id="data01">
+              <h3>분류별 데이터 조회</h3>
+              <div class="joinApproval">
+                <div class="categoryInquiry">
+                  <div class="inquiry01">
+                    <select id="inquiry01" name="inquiry01" required>
+                      <option value="">점검 실</option>
+                      <option value="inquiryList1">작은방</option>
+                      <option value="inquiryList2">큰방</option>
+                    </select>
+                  </div>
+                  <div class="inquiry02">
+                    <select id="inquiry02" name="inquiry02" required>
+                      <option value="">점검부위</option>
+                      <option value="inquiryList01">벽지</option>
+                      <option value="inquiryList02">장판</option>
+                    </select>
+                  </div>
+                  <div class="inquiry03">
+                    <select id="inquiry03" name="inquiry03" required>
+                      <option value="">세부공종</option>
+                      <option value="inquiryList001">오염</option>
+                      <option value="inquiryList002">스크레치</option>
+                    </select>
+                  </div>
+                </div>
+                <table class="tg" style="table-layout: fixed; width: 100%">
+                  <colgroup>
+                    <col style="width: 86px" />
+                    <col style="width: 86px" />
+                    <col style="width: 101px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 133px" />
+                    <col style="width: 164px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th class="tg-9act">
+                        <input type="checkbox" id="mainCheck02" />
+                      </th>
+                      <th class="tg-9act">번호</th>
+                      <th class="tg-9act">이름</th>
+                      <th class="tg-9act">생년월일</th>
+                      <th class="tg-y1p3">연락처</th>
+                      <th class="tg-y1p3">아파트</th>
+                      <th class="tg-y1p3">동</th>
+                      <th class="tg-y1p3">호수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">2</td>
+                      <td class="tg-yf1d">홍길동</td>
+                      <td class="tg-yf1d">19920505</td>
+                      <td class="tg-uj0o">01012345678</td>
+                      <td class="tg-uj0o">롯데캐슬</td>
+                      <td class="tg-uj0o">101동</td>
+                      <td class="tg-uj0o">1011호</td>
+                    </tr>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">1</td>
+                      <td class="tg-yf1d">임수진</td>
+                      <td class="tg-yf1d">19680101</td>
+                      <td class="tg-uj0o">01011111111</td>
+                      <td class="tg-uj0o">아이파크</td>
+                      <td class="tg-uj0o">102동</td>
+                      <td class="tg-uj0o">2048호</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn">
+                  <button class="imgDownload">이미지 다운로드</button>
+                  <button class="pdfDownload">PDF 다운로드</button>
+                </div>
+              </div>
+            </div>
+            <div id="data02">
+              <h3>세대별 데이터 조회</h3>
+              <div class="joinApproval">
+                <div class="generationInquiry">
+                  <div class="generation01">
+                    <select id="generation01" name="generation01" required>
+                      <option value="">점검 실</option>
+                      <option value="generationList1">작은방</option>
+                      <option value="generationList2">큰방</option>
+                    </select>
+                  </div>
+                  <div class="generation02">
+                    <select id="generation02" name="generation02" required>
+                      <option value="">점검부위</option>
+                      <option value="generationList01">벽지</option>
+                      <option value="generationList02">장판</option>
+                    </select>
+                  </div>
+                  <div class="generation03">
+                    <select id="generation03" name="generation03" required>
+                      <option value="">세부공종</option>
+                      <option value="generationList001">오염</option>
+                      <option value="generationList002">스크레치</option>
+                    </select>
+                  </div>
+                  <button class="generationBtn">검색</button>
+                </div>
+                <table class="tg" style="table-layout: fixed; width: 100%">
+                  <colgroup>
+                    <col style="width: 86px" />
+                    <col style="width: 86px" />
+                    <col style="width: 101px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 167px" />
+                    <col style="width: 133px" />
+                    <col style="width: 164px" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th class="tg-9act">
+                        <input type="checkbox" id="mainCheck02" />
+                      </th>
+                      <th class="tg-9act">번호</th>
+                      <th class="tg-9act">이름</th>
+                      <th class="tg-9act">생년월일</th>
+                      <th class="tg-y1p3">연락처</th>
+                      <th class="tg-y1p3">아파트</th>
+                      <th class="tg-y1p3">동</th>
+                      <th class="tg-y1p3">호수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">2</td>
+                      <td class="tg-yf1d">홍길동</td>
+                      <td class="tg-yf1d">19920505</td>
+                      <td class="tg-uj0o">01012345678</td>
+                      <td class="tg-uj0o">롯데캐슬</td>
+                      <td class="tg-uj0o">101동</td>
+                      <td class="tg-uj0o">1011호</td>
+                    </tr>
+                    <tr>
+                      <th class="tg-9act"><input type="checkbox" /></th>
+                      <td class="tg-yf1d">1</td>
+                      <td class="tg-yf1d">임수진</td>
+                      <td class="tg-yf1d">19680101</td>
+                      <td class="tg-uj0o">01011111111</td>
+                      <td class="tg-uj0o">아이파크</td>
+                      <td class="tg-uj0o">102동</td>
+                      <td class="tg-uj0o">2048호</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="btn">
+                  <button class="imgDownload02">이미지 다운로드</button>
+                  <button class="pdfDownload02">PDF 다운로드</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
